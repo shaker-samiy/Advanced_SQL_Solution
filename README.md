@@ -1,7 +1,7 @@
 # Advanced_SQL_Solution
 
 ``` sql
-# Creating a quert to select the city with smallest length
+# Creating a query to select the city with smallest length
 WITH smallest_city AS (
 SELECT * FROM stations
 WHERE LENGTH(city) = 3
