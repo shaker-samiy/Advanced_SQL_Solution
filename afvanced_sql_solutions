@@ -1,0 +1,23 @@
+
+``` sql
+WITH smallest_city AS (
+SELECT * FROM stations
+WHERE LENGTH(city) = 3
+       ORDER BY city
+        LIMIT 1 
+),
+
+greatest_city AS
+(
+    SELECT * FROM station
+WHERE LENGTH(city) = 21
+       ORDER BY city
+        LIMIT 1
+)
+       SELECT city, length(smallest_city.city) FROM
+       smallest_city
+       UNION 
+       SELECT city, length(greatest_city.city) FROM
+       greatest_city
+       ;
+```
